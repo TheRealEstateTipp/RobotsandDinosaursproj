@@ -8,5 +8,13 @@ namespace RobotsvsDinosaurs
 {
     class Battlefield
     {
+        Robot robot;
+        Dinosaur dino;
+
+
+        public void RandomMethod()
+        {
+            robot.Attack(dino);
+        }
     }
 }
