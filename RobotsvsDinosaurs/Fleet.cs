@@ -8,5 +8,6 @@ namespace RobotsvsDinosaurs
 {
     class Fleet
     {
+        public List<Robot> robot = new List<Robot>() { new Robot("Robot1"), new Robot("Robot2"), new Robot("Robot 3") };
     }
 }
