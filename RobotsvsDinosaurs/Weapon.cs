@@ -18,7 +18,7 @@ namespace RobotsvsDinosaurs
             attackPower = damage;
         }
         //member methods (Can Do)
-        public void WeaponType()
+        
        
                  
                     
