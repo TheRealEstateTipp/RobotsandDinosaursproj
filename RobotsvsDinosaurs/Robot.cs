@@ -67,6 +67,7 @@ namespace RobotsvsDinosaurs
         {
             Console.WriteLine(dinosaur.type + "is attacked by" + Name);
             dinosaur.dinohealth -= weapon.attackPower;
+            PowerLevel -= 10;
         }
             
     }

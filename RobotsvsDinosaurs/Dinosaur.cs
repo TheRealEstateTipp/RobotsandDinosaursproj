@@ -24,6 +24,8 @@ namespace RobotsvsDinosaurs
         {
             Console.WriteLine(robot.Name + "is attacked by" + type);
             robot.Health -= attackpower;
+            energy -= 10;
+
         }
     }
 
