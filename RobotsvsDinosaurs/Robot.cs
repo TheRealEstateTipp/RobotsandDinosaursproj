@@ -13,7 +13,7 @@ namespace RobotsvsDinosaurs
         public int Health;
         public int PowerLevel;
         List<Weapon> weapons = new List<Weapon>() { new Weapon("Sword", 40), new Weapon("Machete", 50), new Weapon("Rifle", 58) };
-        string robotweapon;
+        Weapon robotweapon;
         
 
 
@@ -44,6 +44,8 @@ namespace RobotsvsDinosaurs
             Console.WriteLine("Please Select Your Weapon of Choice: Sword,  Machete,  Rifle!");
             string robotweapon = Console.ReadLine();
 
+
+
             switch (robotweapon)
             {
                 case "Sword":
@@ -59,21 +61,11 @@ namespace RobotsvsDinosaurs
                     Console.WriteLine("Your Weapon Choice is Invalid, please try again");
                     break;
             }
-            
-
-
-
-            
-           
-           
-
-           
-            
-
+         
 
         public void Attack(Dinosaur dinoToAttack)
         {
-            dinoToAttack.dinoHealth -= robotweapon.attackPower;
+            dinoToAttack.dinohealth -= robotweapon.attackPower;
             PowerLevel--;
         }
 
