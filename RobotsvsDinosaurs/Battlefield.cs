@@ -8,13 +8,12 @@ namespace RobotsvsDinosaurs
 {
     class Battlefield
     {
-        Robot robot;
-        Dinosaur dino;
+        public Herd herd;
+        public Fleet fleet;
 
 
-        public void RandomMethod()
-        {
-            robot.Attack(dino);
-        }
+
+
+        
     }
 }
