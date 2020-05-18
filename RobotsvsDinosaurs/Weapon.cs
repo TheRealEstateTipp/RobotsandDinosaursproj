@@ -9,13 +9,13 @@ namespace RobotsvsDinosaurs
     class Weapon
     {
         //member variables (Has A)
-        public string Type;
+        public string type;
         public int attackPower;
 
-        public Weapon(string type, int damage)
+        public Weapon(string type, int attackPower)
         {
-            Type = type;
-            attackPower = damage;
+            this.type = type;
+            this.attackPower = attackPower;
         }
         //member methods (Can Do)
         

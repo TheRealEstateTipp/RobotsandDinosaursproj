@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,8 +14,8 @@ namespace RobotsvsDinosaurs
         public int Health;
         public int PowerLevel;
         List<Weapon> weapons = new List<Weapon>() { new Weapon("Sword", 40), new Weapon("Machete", 50), new Weapon("Rifle", 58) };
-        Weapon robotweapon;
-        
+        Weapon weapon;
+
 
 
         //Constructor
@@ -40,7 +41,7 @@ namespace RobotsvsDinosaurs
 
         public void SelectWeapon()
         {
-            
+
             Console.WriteLine("Please Select Your Weapon of Choice: Sword,  Machete,  Rifle!");
             string robotweapon = Console.ReadLine();
 
@@ -61,13 +62,12 @@ namespace RobotsvsDinosaurs
                     Console.WriteLine("Your Weapon Choice is Invalid, please try again");
                     break;
             }
-         
-
-        public void Attack(Dinosaur dinoToAttack)
-        {
-            dinoToAttack.dinohealth -= robotweapon.attackPower;
-            PowerLevel--;
         }
-
+        public void Attack(Dinosaur dinosaur)
+        {
+            Console.WriteLine(dinosaur.type + "is attacked by" + Name);
+            dinosaur.dinohealth -= weapon.attackPower;
+        }
+            
     }
-}
+}   
