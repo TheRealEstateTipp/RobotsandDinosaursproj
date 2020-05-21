@@ -19,14 +19,13 @@ namespace RobotsvsDinosaurs
 
 
         //Constructor
-        public Robot(string Name)
+        public Robot()
         {
-            this.Name = Name;
             NameYourRobot();
             Health = 100;
             PowerLevel = 100;
             SelectWeapon();
-
+            
         }
 
 
@@ -44,9 +43,7 @@ namespace RobotsvsDinosaurs
 
             Console.WriteLine("Please Select Your Weapon of Choice: Sword,  Machete,  Rifle!");
             string robotweapon = Console.ReadLine();
-
-
-
+          
             switch (robotweapon)
             {
                 case "Sword":

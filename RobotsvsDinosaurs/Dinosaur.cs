@@ -13,9 +13,9 @@ namespace RobotsvsDinosaurs
         public int energy;
         public int attackpower;
 
-    public Dinosaur(string type)
+    public Dinosaur()
         {
-            this.type = type;
+            type = "TRex"
             dinohealth = 100;
             energy = 100;
             attackpower = 48;
