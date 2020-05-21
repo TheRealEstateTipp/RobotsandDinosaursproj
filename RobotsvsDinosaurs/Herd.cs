@@ -8,7 +8,9 @@ namespace RobotsvsDinosaurs
 {
     class Herd
     {
-        public List<Dinosaur> dinosaurs = new List<Dinosaur>() { new Dinosaur("TRex"), new Dinosaur("Spino"), new Dinosaur("Plateo") };
+        public Dinosaur dino1 = new Dinosaur();
+        public Dinosaur dino2 = new Dinosaur();
+        public Dinosaur dino3 = new Dinosaur();
 
     }
 }
