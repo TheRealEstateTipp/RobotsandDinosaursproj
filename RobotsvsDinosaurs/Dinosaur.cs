@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace RobotsvsDinosaurs
 {
-    class Dinosaur
+    public class Dinosaur
     {
         public string type;
         public int dinohealth;
         public int energy;
         public int attackpower;
 
-    public Dinosaur()
+    public Dinosaur(string type)
         {
-            type = "TRex"
+            this.type = type;
             dinohealth = 100;
             energy = 100;
             attackpower = 48;

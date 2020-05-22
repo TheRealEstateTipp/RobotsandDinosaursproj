@@ -6,11 +6,24 @@ using System.Threading.Tasks;
 
 namespace RobotsvsDinosaurs
 {
-    class Herd
+    public class Herd
     {
-        public Dinosaur dino1 = new Dinosaur();
-        public Dinosaur dino2 = new Dinosaur();
-        public Dinosaur dino3 = new Dinosaur();
+        public List<Dinosaur> dinosaurs;
 
+        public Herd()
+        {
+            dinosaurs = new List<Dinosaur>();
+
+            Dinosaur dino1 = new Dinosaur("T-Rex");
+            Dinosaur dino2 = new Dinosaur("Spino");
+            Dinosaur dino3 = new Dinosaur("Brachio");
+
+            dinosaurs.Add(dino1);
+            dinosaurs.Add(dino2);
+            dinosaurs.Add(dino3);
+        }
+        
+           
+        
     }
 }

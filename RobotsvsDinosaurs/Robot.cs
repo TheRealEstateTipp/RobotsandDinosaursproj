@@ -3,29 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace RobotsvsDinosaurs
 {
-    class Robot
+    public class Robot
     {   //Member Variables 
         public string Name;
         public int Health;
         public int PowerLevel;
-        List<Weapon> weapons = new List<Weapon>() { new Weapon("Sword", 40), new Weapon("Machete", 50), new Weapon("Rifle", 58) };
-        Weapon weapon;
-
+        public Weapon weapon;
 
 
         //Constructor
         public Robot()
         {
-            NameYourRobot();
+            Name = NameYourRobot();
             Health = 100;
             PowerLevel = 100;
-            SelectWeapon();
-            
+            weapon = SelectWeapon();
         }
 
 
@@ -38,7 +36,7 @@ namespace RobotsvsDinosaurs
             return input;
         }
 
-        public void SelectWeapon()
+        public Weapon SelectWeapon()
         {
 
             Console.WriteLine("Please Select Your Weapon of Choice: Sword,  Machete,  Rifle!");
