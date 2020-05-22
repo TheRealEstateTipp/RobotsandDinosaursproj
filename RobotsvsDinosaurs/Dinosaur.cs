@@ -20,7 +20,7 @@ namespace RobotsvsDinosaurs
             energy = 100;
             attackpower = 48;
         }
-    public void Attack(Robot robot)
+    public void Attack(Robots robot)
         {
             Console.WriteLine(robot.Name + "is attacked by" + type);
             robot.Health -= attackpower;

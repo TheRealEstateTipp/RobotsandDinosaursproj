@@ -25,7 +25,7 @@ namespace RobotsvsDinosaurs
                 default:
                     break;
             }
-            Robot Tom = new Robot(selectedWeapon);
+            Robots Tom = new Robots(selectedWeapon);
         }
     }
 }

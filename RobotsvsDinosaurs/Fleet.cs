@@ -8,8 +8,23 @@ namespace RobotsvsDinosaurs
 {
     public class Fleet
     {
-        public Robot robot1 = new Robot();
-        public Robot robot2 = new Robot();
-        public Robot robot3 = new Robot();
+        public List<Robots> robots;
+
+        
+        public Fleet()
+        {
+             robots = new List<Robots>();
+
+             Robots robot1 = new Robots();
+             Robots robot2 = new Robots();
+             Robots robot3 = new Robots();
+
+            robots.Add(robot1);
+            robots.Add(robot2);
+            robots.Add(robot3);
+
+
+        }
+   
     }
 }

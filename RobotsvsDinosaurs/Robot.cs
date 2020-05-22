@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace RobotsvsDinosaurs
 {
-    public class Robot
+    public class Robots
     {   //Member Variables 
         public string Name;
         public int Health;
@@ -18,7 +18,7 @@ namespace RobotsvsDinosaurs
 
 
         //Constructor
-        public Robot()
+        public Robots()
         {
             Name = NameYourRobot();
             Health = 100;
