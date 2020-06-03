@@ -13,9 +13,9 @@ namespace RobotsvsDinosaurs
         public int energy;
         public int attackpower;
 
-    public Dinosaur(string type)
+    public Dinosaur()
         {
-            this.type = type;
+            SelectDinoType();
             dinohealth = 100;
             energy = 100;
             attackpower = 48;
@@ -27,30 +27,12 @@ namespace RobotsvsDinosaurs
             energy -= 10;
 
         }
-    public void SelectAttackType()
+    public int SelectDinoType()
         {
-            Console.WriteLine("Please Select your Attack Type: Dragon Breath, Tail Spin, Bite");
-            string attackType = Console.ReadLine();
-
-            switch (attackType)
-            {
-                case "Dragon Breath":
-                    Console.WriteLine("You have selected Dragon Breath");
-                    break;
-                case "Tail Spin":
-                    Console.WriteLine("You have selected Tail Spin");
-                    break;
-                case "Bite":
-                    Console.WriteLine("You have selected Bite");
-                    break;
-                default:
-                    Console.WriteLine("This is an invalid selection");
-                    break;
-
-
-
-            }
-
+            string[] dinosaurs = new string[] { "T-Rex", "Spino", "Brachio" };
+            Console.WriteLine("Please select the type of dinosaur your would like battle with");
+            string input = Console.ReadLine();
+            return Convert.ToInt32(input);
         }
     }
 
