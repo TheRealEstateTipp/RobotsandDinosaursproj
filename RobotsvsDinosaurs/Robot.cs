@@ -23,7 +23,7 @@ namespace RobotsvsDinosaurs
             Name = NameYourRobot();
             Health = 100;
             PowerLevel = 100;
-            
+            SelectWeapon();
             
         }
 
@@ -37,28 +37,18 @@ namespace RobotsvsDinosaurs
             return input;
         }
 
-        public string SelectWeapon()
+        public int SelectWeapon()
         {
-
-            Console.WriteLine("Please Select Your Weapon of Choice: Sword,  Machete,  Rifle!");
-            string weapon = Console.ReadLine();
-          
-            switch (weapon)
+            List<Weapon> weapons = new List<Weapon>() { new Weapon("Machete", 48), new Weapon("Rifle", 51), new Weapon("Nuclear Gun", 60)};
+            Console.WriteLine("Please select your weapon that you would like to take to battle");
+            for (int i = 0; i < weapons.Count; i++)
             {
-                case "Sword":
-                    Console.WriteLine("You have selected a Sword");
-                    break;
-                case "Machete":
-                    Console.WriteLine("You have selected a Machete");
-                    break;
-                case "Rifle":
-                    Console.WriteLine("You have selected a Rifle");
-                    break;
-                default:
-                    Console.WriteLine("Your Weapon Choice is Invalid, please try again");
-                    break;
+                Console.WriteLine((i) + weapons[i].type);
+                
             }
-            return weapon;
+            string userInput = Console.ReadLine();
+            return Convert.ToInt32(userInput);
+
         }
         public void Attack(Dinosaur dinosaur)
         {
